@@ -1,5 +1,3 @@
-// src/app/api/contact/route.ts
-
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
@@ -24,11 +22,14 @@ export async function POST(request: Request) {
       host: "localhost", // Verbind met de lokale Postfix-server
       port: 25, // Standaard SMTP-poort voor Postfix
       secure: false, // Gebruik geen SSL/TLS omdat we de lokale server gebruiken
+      tls: {
+        rejectUnauthorized: false, // Schakel de verificatie van het zelfondertekende certificaat uit
+      },
     });
 
     // Instellingen voor de e-mail
     const mailOptions = {
-      from: "root@noah-stukadoor.nl", // Verzendadres dat overeenkomt met je domein
+      from: "root@ubuntu", // Verzendadres dat overeenkomt met je domein
       to: "marcowammes@outlook.com", // Ontvangstadres
       subject: "Nieuw formulier ontvangen",
       text: `Er is een nieuw formulier ingediend met de volgende gegevens:

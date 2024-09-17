@@ -31,7 +31,7 @@ const Contact = () => {
             Wij zijn trots op ons vakmanschap en staan garant voor kwaliteit, betrouwbaarheid en uitstekende service. Vanuit onze vestigingen in Limburg en Brabant bedienen wij een breed klantenbestand, van Maastricht tot Eindhoven en van Venlo tot Tilburg. Laat uw project aan ons over en ervaar zelf waarom wij worden gezien als de beste stukadoor en tegelzetter in de regio.
           </p>
           <p className="mb-6">
-            Neem vandaag nog contact met ons op via het formulier hierboven, of bel ons direct op 06-12345678. Wij kijken ernaar uit om samen met u uw project tot een succes te maken!
+            Neem vandaag nog contact met ons op via het formulier hierboven, of bel ons direct op 06-45036627. Wij kijken ernaar uit om samen met u uw project tot een succes te maken!
           </p>
         </div>
       </main>

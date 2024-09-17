@@ -10,6 +10,7 @@ import {
   useMotionValueEvent,
 } from "framer-motion";
 import { useRef } from "react";
+import Link from "next/link";
 
 export const Hero = () => {
   const heroRef = useRef(null);
@@ -34,11 +35,9 @@ export const Hero = () => {
               Bent u opzoek naar een betrouwbare tegelzetter of stukadoor dan neem vrijblijvend contact op voor een offerte. Bekijk onze tarieven pagina dan kunt u een groffe inschatting maken
             </p>
             <div className="flex gap-1 items-center mt-[30px]">
-              <button className="btn btn-primary">Contact opnemen</button>
-              <button className="btn btn-text gap-1">
-                <span>Over Ons</span>
-                <ArrowIcon className="h-5 w-5" />
-              </button>
+              <Link href="/contact" passHref>
+              <button className="btn btn-primary">Contact</button>
+              </Link>
             </div>
           </div>
           <div className="mt-20 md:mt-0 md:h-[648px] md:flex-1 relative">
