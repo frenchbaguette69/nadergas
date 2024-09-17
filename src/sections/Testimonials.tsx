@@ -1,74 +1,119 @@
 "use client";
-import avatar1 from "@/assets/avatar-1.png";
-import avatar2 from "@/assets/avatar-2.png";
-import avatar3 from "@/assets/avatar-3.png";
-import avatar4 from "@/assets/avatar-4.png";
-import avatar5 from "@/assets/avatar-5.png";
-import avatar6 from "@/assets/avatar-6.png";
-import avatar7 from "@/assets/avatar-7.png";
-import avatar8 from "@/assets/avatar-8.png";
-import avatar9 from "@/assets/avatar-9.png";
-import Image from "next/image";
-import { twMerge } from "tailwind-merge";
 import { motion } from "framer-motion";
 import React from "react";
 
+
 const testimonials = [
   {
-    text: "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention.",
-    imageSrc: avatar1.src,
-    name: "Jamie Rivera",
-    username: "@jamietechguru00",
+    text: "Ik ben ontzettend tevreden met het resultaat. De muren zien er weer als nieuw uit!",
+    imageSrc: "",
+    name: "Pieter de Vries",
+    username: "@pietertje123",
   },
   {
-    text: "Our team's productivity has skyrocketed since we started using this tool. ",
-    imageSrc: avatar2.src,
-    name: "Josh Smith",
-    username: "@jjsmith",
+    text: "Uitstekende service en prachtig vakmanschap. Mijn badkamertegels zijn perfect geplaatst.",
+    imageSrc: "",
+    name: "Sven Jansen",
+    username: "@sven.jans",
   },
   {
-    text: "This app has completely transformed how I manage my projects and deadlines.",
-    imageSrc: avatar3.src,
-    name: "Morgan Lee",
-    username: "@morganleewhiz",
+    text: "Zeer professioneel team dat alles netjes achterlaat. Echt een aanrader!",
+    imageSrc: "",
+    name: "Eva van Dijk",
+    username: "@evadijk456",
   },
   {
-    text: "I was amazed at how quickly we were able to integrate this app into our workflow.",
-    imageSrc: avatar4.src,
-    name: "Casey Jordan",
-    username: "@caseyj",
+    text: "Het werk werd snel en nauwkeurig uitgevoerd. Ik ben erg blij met het eindresultaat.",
+    imageSrc: "",
+    name: "Martijn Bakker",
+    username: "@martijnbakker",
   },
   {
-    text: "Planning and executing events has never been easier. This app helps me keep track of all the moving parts, ensuring nothing slips through the cracks.",
-    imageSrc: avatar5.src,
-    name: "Taylor Kim",
-    username: "@taylorkimm",
+    text: "Vriendelijk personeel en uitstekende kwaliteit. Ik zou ze zeker opnieuw inhuren.",
+    imageSrc: "",
+    name: "Sanne Visser",
+    username: "@sannevisser01",
   },
   {
-    text: "The customizability and integration capabilities of this app are top-notch.",
-    imageSrc: avatar6.src,
-    name: "Riley Smith",
-    username: "@rileysmith1",
+    text: "Geweldige ervaring van begin tot eind. Mijn woonkamer ziet er fantastisch uit!",
+    imageSrc: "",
+    name: "Ruben Vermeulen",
+    username: "@rubenv123",
   },
   {
-    text: "Adopting this app for our team has streamlined our project management and improved communication across the board.",
-    imageSrc: avatar7.src,
-    name: "Jordan Patels",
-    username: "@jpatelsdesign",
+    text: "Ik had nooit gedacht dat het zo makkelijk zou zijn om alles te laten doen. Super tevreden!",
+    imageSrc: "",
+    name: "Laura Bos",
+    username: "@laurabos87",
   },
   {
-    text: "With this app, we can easily assign tasks, track progress, and manage documents all in one place.",
-    imageSrc: avatar8.src,
-    name: "Sam Dawson",
-    username: "@dawsontechtips",
+    text: "Ze hebben perfect werk geleverd en waren erg behulpzaam. Aanrader!",
+    imageSrc: "",
+    name: "Thomas de Graaf",
+    username: "@thomasg",
   },
   {
-    text: "Its user-friendly interface and robust features support our diverse needs.",
-    imageSrc: avatar9.src,
-    name: "Casey Harper",
-    username: "@casey09",
+    text: "Professionele service met oog voor detail. Ik ben erg blij met de resultaten!",
+    imageSrc: "",
+    name: "Nina Janssen",
+    username: "@ninaj1990",
+  },
+  {
+    text: "De stukadoors waren vriendelijk en werkten erg snel. Onze muren zien er prachtig uit.",
+    imageSrc: "",
+    name: "Marco Kuiper",
+    username: "@marcokuip",
+  },
+  {
+    text: "Het tegelwerk in de keuken is fantastisch gedaan. Alles tot in de kleinste details afgewerkt.",
+    imageSrc: "",
+    name: "Lotte de Wit",
+    username: "@lottedewit",
+  },
+  {
+    text: "Mijn plafond is keurig gestukt en het team was erg professioneel. Zeker de moeite waard.",
+    imageSrc: "",
+    name: "Henk Meijer",
+    username: "@henkmeijer",
+  },
+  {
+    text: "Uitstekende communicatie en snelle service. Het resultaat is verbluffend!",
+    imageSrc: "",
+    name: "Fleur Smit",
+    username: "@fleursmit",
+  },
+  {
+    text: "Ze hebben ons echt geholpen met het plannen van ons renovatieproject. Bedankt voor de geweldige service!",
+    imageSrc: "",
+    name: "Bram Koster",
+    username: "@bramkoster",
+  },
+  {
+    text: "Erg blij met de afwerking van onze nieuwe badkamer. Het team was professioneel en vriendelijk.",
+    imageSrc: "",
+    name: "Anouk Scholten",
+    username: "@anoukscholten",
+  },
+  {
+    text: "De beste keuze die we konden maken voor onze verbouwing. Zeer kundig en betrouwbaar.",
+    imageSrc: "",
+    name: "David Mulder",
+    username: "@davidmulder",
+  },
+  {
+    text: "Onze woonkamer is nu een stuk lichter en ruimer. Het stucwerk is geweldig gedaan!",
+    imageSrc: "",
+    name: "Iris de Boer",
+    username: "@irisboer89",
+  },
+  {
+    text: "Betrouwbaar, snel en een prachtige afwerking. Ik zou ze iedereen aanraden.",
+    imageSrc: "",
+    name: "Max van Leeuwen",
+    username: "@maxvleeuwen",
   },
 ];
+
 
 const firstColumn = testimonials.slice(0, 3);
 const secondColumn = testimonials.slice(3, 6);
@@ -98,13 +143,6 @@ const TestimonialsColumn = (props: {
             <div className="card">
               <div>{text}</div>
               <div className="flex items-center gap-2 mt-5">
-                <Image
-                  src={imageSrc}
-                  alt={name}
-                  width={40}
-                  height={40}
-                  className="h-10 w-10 rounded-full"
-                />
                 <div className="flex flex-col">
                   <div className="font-medium tracking-tight leading-5">
                     {name}
@@ -126,12 +164,11 @@ export const Testimonials = () => {
       <div className="container">
         <div className="section-heading">
           <div className="flex justify-center">
-            <div className="tag">Testimonials</div>
+            <div className="tag">Reviews</div>
           </div>
-          <h2 className="section-title mt-5">What our users say</h2>
+          <h2 className="section-title mt-5">Wat onze klanten zeggen</h2>
           <p className="section-description mt-5">
-            From intuitive design to powerful features, our app has become an
-            essential tool for users around the world.
+            bekijk hoe tevreden onze klanten zijn met de werkzaamheden die wij hebben geleverd
           </p>
         </div>
         <div className="flex justify-center gap-6 mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[738px] overflow-hidden">

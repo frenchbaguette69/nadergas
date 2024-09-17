@@ -6,8 +6,8 @@ import { twMerge } from "tailwind-merge";
 const dmSans = DM_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Light Saas Landing Page",
-  description: "Template created by Frontend Tribe",
+  title: "Noah Stukadoor en Tegelzetter Limburg",
+  description: "Bent u op zoek naar een tegelzetter of stukadoor in Limburg? Noah Stukadoors biedt hoogwaardige diensten voor zowel stukadoorswerk als tegelzetten in Limburg en Brabant.",
 };
 
 export default function RootLayout({
@@ -16,8 +16,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="relative">
-      <body className={twMerge(dmSans.className, "antialiased bg-[#EAEEFE]")}>
+    <html lang="nl" className="relative">
+      <body className={twMerge(dmSans.className, "antialiased")}>
         {children}
       </body>
     </html>
