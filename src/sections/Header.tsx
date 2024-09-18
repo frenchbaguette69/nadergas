@@ -34,6 +34,45 @@ export const Header = () => {
               <SheetContent side="left" className="p-4">
                 <nav className="flex flex-col gap-4">
                   <Link href="/" className="text-black">Home</Link>
+                  <Link href="/diensten" className="text-black">diensten</Link>
+
+                  <div className="absolute hidden group-hover:block bg-white shadow-lg mt-2 rounded-md">
+          <ul className="py-2 w-48">
+            <li>
+              <Link
+                href="/diensten/stukadoor-met-materiaal"
+                className="block px-4 py-2 text-black hover:bg-gray-200"
+              >
+                stukadoor met materiaal
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/diensten/stukadoor-zonder-materiaal"
+                className="block px-4 py-2 text-black hover:bg-gray-200"
+              >
+                stukadoor zonder materiaal
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/diensten/spachtelputz"
+                className="block px-4 py-2 text-black hover:bg-gray-200"
+              >
+                Spachtelputz (sierpleister)
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/diensten/tegelzetten"
+                className="block px-4 py-2 text-black hover:bg-gray-200"
+              >
+                tegelzetten
+              </Link>
+            </li>
+          </ul>
+        </div>
+                  
                   <Link href="/about" className="text-black">Over Ons</Link>
                   <Link href="/tarieven" className="text-black">Tarieven</Link>
                   <Link href="/contact" className="bg-black text-white px-4 py-2 rounded-lg font-medium inline-flex align-items justify-center tracking-tight">
