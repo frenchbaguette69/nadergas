@@ -32,7 +32,7 @@ export const Hero = () => {
               Limburg Stukadoor en tegelzetter
             </h1>
             <p className="text-xl text-[#010D3E] tracking-tight mt-8">
-              Bent u opzoek naar een betrouwbare tegelzetter of stukadoor dan neem vrijblijvend contact op voor een offerte. Bekijk onze tarieven pagina dan kunt u een groffe inschatting maken
+              Bent u op zoek naar een betrouwbare tegelzetter of stukadoor dan neem vrijblijvend contact op voor een offerte. Bekijk onze tarieven pagina dan kunt u een groffe inschatting maken
             </p>
             <div className="flex gap-1 items-center mt-[30px]">
               <Link href="/contact" passHref>
