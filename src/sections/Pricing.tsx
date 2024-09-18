@@ -113,6 +113,7 @@ export const Pricing = () => {
               <option value="Sausklaar plafond zonder materiaal">Sausklaar (zeer gladde plafond) zonder materiaal</option>
               <option value="Spachtelputz muren">Spachtelputz (sierpleister) muren</option>
               <option value="Spachtelputz plafond">Spachtelputz (sierpleister) plafond</option>
+              <option value="Tegelzetten">Tegelzetten op aanvraag</option>
             </select>
           </div>
 
