@@ -75,7 +75,7 @@ export const ProductShowcase = () => {
     <div className="flex flex-col justify-center items-center p-6">
       <h2 className="text-3xl font-bold text-gray-800">Tegelzetter Werk</h2>
       <p className="text-gray-600 mt-4 text-center">
-        Als ervaren tegelzetter bieden wij kwalitatieve tegelwerkzaamheden in Roermond en omgeving, actief in zowel Limburg als Brabant. Wij werken met diverse soorten tegels en zorgen voor een professioneel afgewerkt resultaat. Bent u opzoek naar een tegelzetter in limburg. Neem dan vrijblijven contact op
+        Als ervaren tegelzetter bieden wij kwalitatieve tegelwerkzaamheden in Roermond en omgeving, actief in zowel Limburg als Brabant. Wij werken met diverse soorten tegels en zorgen voor een professioneel afgewerkt resultaat. Bent u op zoek naar een tegelzetter in limburg. Neem dan vrijblijven contact op
       </p>
     </div>
   </div>
