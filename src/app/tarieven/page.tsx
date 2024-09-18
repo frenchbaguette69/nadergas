@@ -57,8 +57,8 @@ const Tarieven = () => {
           <p className="mb-6">
             Heeft u specifieke wensen of bent u benieuwd naar een prijsopgave voor uw project? Neem vandaag nog contact met ons op voor een vrijblijvende offerte. Wij denken graag met u mee en bieden een oplossing op maat.
           </p>
-          <p className="text-center mt-8">
-            <a href="/contact" className="text-blue-600 hover:underline">Klik hier om contact met ons op te nemen</a> of bel ons op +31 6 16289147.
+          <p className="text-center mt-8 text-4xl">
+            <a href="/contact" className="text-blue-600 hover:underline">Klik hier om contact met ons op te nemen</a><br /> of bel ons op +31 6 16289147.
           </p>
         </div>
       </main>

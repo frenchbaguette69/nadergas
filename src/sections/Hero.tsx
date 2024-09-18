@@ -34,10 +34,18 @@ export const Hero = () => {
             <p className="text-xl text-[#010D3E] tracking-tight mt-8">
               Bent u op zoek naar een betrouwbare tegelzetter of stukadoor dan neem vrijblijvend contact op voor een offerte. Bekijk onze tarieven pagina dan kunt u een groffe inschatting maken
             </p>
-            <div className="flex gap-1 items-center mt-[30px]">
+            <div className="flex gap-4 items-center mt-[30px]">
               <Link href="/contact" passHref>
               <button className="btn btn-primary">Contact</button>
               </Link>
+              <Link href="https://wa.me/+31645036627" passHref>
+              <button className="btn btn-primary">Whatsapp</button>
+              </Link>
+              <Link href="tel:+31645036627" passHref>
+                <button className="btn btn-primary">Bellen</button>
+              </Link>
+
+
             </div>
           </div>
           <div className="mt-20 md:mt-0 md:h-[648px] md:flex-1 relative">

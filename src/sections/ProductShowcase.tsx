@@ -8,6 +8,7 @@ import { useRef } from "react";
 import TegelZetter from "@/assets/tegelzetter.webp";
 import StukaDoor from "@/assets/stukadoor.jpg";
 
+
 export const ProductShowcase = () => {
   const sectionRef = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -22,7 +23,7 @@ export const ProductShowcase = () => {
     >
       <div className="container">
         <div className="section-heading">
-          <h2 className="section-title mt-5">Onze Diensten</h2>
+          <h2 className="text-4xl font-bold text-center mt-5">Tarieven voor stukadoor en tegelwerken</h2>
           <p className="section-description mt-5">
             Wij bieden stukadoor diensten voor het plafond en voor de muren.
             Daarnaast bieden wij ook tegelzetten voor vloer en muur.
@@ -75,7 +76,7 @@ export const ProductShowcase = () => {
     <div className="flex flex-col justify-center items-center p-6">
       <h2 className="text-3xl font-bold text-gray-800">Tegelzetter Werk</h2>
       <p className="text-gray-600 mt-4 text-center">
-        Als ervaren tegelzetter bieden wij kwalitatieve tegelwerkzaamheden in Roermond en omgeving, actief in zowel Limburg als Brabant. Wij werken met diverse soorten tegels en zorgen voor een professioneel afgewerkt resultaat. Bent u op zoek naar een tegelzetter in limburg. Neem dan vrijblijven contact op
+        Als ervaren tegelzetter bieden wij kwalitatieve tegelwerkzaamheden in Roermond en omgeving, actief in zowel Limburg als Brabant. Wij werken met diverse soorten tegels en zorgen voor een professioneel afgewerkt resultaat. Bent u opzoek naar een tegelzetter in limburg. Neem dan vrijblijven contact op
       </p>
     </div>
   </div>

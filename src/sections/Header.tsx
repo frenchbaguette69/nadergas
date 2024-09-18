@@ -1,3 +1,6 @@
+"use client"; // Zorgt ervoor dat dit component client-side wordt gerenderd
+
+import React from "react";
 import ArrowRight from "@/assets/arrow-right.svg";
 import Logo from "@/assets/logonoah.png";
 import Image from "next/image";
@@ -5,13 +8,12 @@ import MenuIcon from "@/assets/menu.svg";
 import Link from "next/link";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
-
 export const Header = () => {
   return (
     <header className="sticky top-0 backdrop-blur-sm z-20">
       <div className="flex justify-center items-center py-3 bg-black text-white text-sm gap-3">
         <p className="text-white/60 hidden md:block">
-          Op zoek naar stukadoor Limburg, of tegelzetter Limburg? 
+          Op zoek naar stukadoor, of tegelzetter? 
         </p>
         <div className="inline-flex gap-1 items-center">
           <p>neem contact op: +31 6 16289147</p>
@@ -34,45 +36,9 @@ export const Header = () => {
               <SheetContent side="left" className="p-4">
                 <nav className="flex flex-col gap-4">
                   <Link href="/" className="text-black">Home</Link>
-                  <Link href="/diensten" className="text-black">diensten</Link>
-
-                  <div className="absolute hidden group-hover:block bg-white shadow-lg mt-2 rounded-md">
-          <ul className="py-2 w-48">
-            <li>
-              <Link
-                href="/diensten/stukadoor-met-materiaal"
-                className="block px-4 py-2 text-black hover:bg-gray-200"
-              >
-                stukadoor met materiaal
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/diensten/stukadoor-zonder-materiaal"
-                className="block px-4 py-2 text-black hover:bg-gray-200"
-              >
-                stukadoor zonder materiaal
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/diensten/spachtelputz"
-                className="block px-4 py-2 text-black hover:bg-gray-200"
-              >
-                Spachtelputz (sierpleister)
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/diensten/tegelzetten"
-                className="block px-4 py-2 text-black hover:bg-gray-200"
-              >
-                tegelzetten
-              </Link>
-            </li>
-          </ul>
-        </div>
-                  
+                  <Link href="/spachtelputz" className="text-black">Spachtelputz</Link>
+                  <Link href="/stukadoorwerk" className="text-black">Stukadoorwerk</Link>
+                  <Link href="/tegelzetten" className="text-black">Tegelzetten</Link>
                   <Link href="/about" className="text-black">Over Ons</Link>
                   <Link href="/tarieven" className="text-black">Tarieven</Link>
                   <Link href="/contact" className="bg-black text-white px-4 py-2 rounded-lg font-medium inline-flex align-items justify-center tracking-tight">
@@ -86,6 +52,9 @@ export const Header = () => {
             <nav className="hidden md:flex gap-6 text-black items-center">
               <Link href="/about">Over Ons</Link>
               <Link href="/tarieven">Tarieven</Link>
+              <Link href="/spachtelputz" className="text-black">Spachtelputz</Link>
+              <Link href="/stukadoorwerk" className="text-black">Stukadoorwerk</Link>
+              <Link href="/tegelzetten" className="text-black">Tegelzetten</Link>
               <Link href="/contact">
                 <button className="bg-black text-white px-4 py-2 rounded-lg font-medium inline-flex align-items justify-center tracking-tight">
                   Contact opnemen
