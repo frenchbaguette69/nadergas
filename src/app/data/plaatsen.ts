@@ -8,5 +8,3 @@ const plaatsen: string[] = [
 ];
 
 export default plaatsen;
-
-  

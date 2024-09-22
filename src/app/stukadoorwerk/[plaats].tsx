@@ -10,27 +10,34 @@ interface StukadoorPageProps {
 
 // Genereer dynamische routes voor elke plaats
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = plaatsen.map((plaats) => ({
-    params: { plaats: plaats.toLowerCase() },
-  }));
+  const paths = plaatsen.map((plaats) => {
+    console.log('Generating path for:', plaats.toLowerCase());  // Logging
+    return {
+      params: { plaats: plaats.toLowerCase() },
+    };
+  });
 
   return {
     paths,
-    fallback: 'blocking',  // Dit zorgt ervoor dat routes tijdens runtime worden gegenereerd
+    fallback: 'blocking',
   };
 };
+
 
 
 // Haal de gegevens op voor een specifieke plaats
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const { plaats } = params as { plaats: string };  // Typing voor plaats als string
+  const { plaats } = params as { plaats: string };
+
+  console.log('Generating props for:', plaats);  // Logging
 
   return {
     props: {
-      plaats,  // Geeft de plaatsnaam door als prop aan de pagina
+      plaats,
     },
   };
 };
+
 
 // De pagina die wordt weergegeven voor elke specifieke plaats
 const StukadoorPage: NextPage<StukadoorPageProps> = ({ plaats }) => {
