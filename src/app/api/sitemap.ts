@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import plaatsen from '../../data/plaatsen'; // Importeer je lijst met plaatsen
+import plaatsen from '../data/plaatsen'; // Importeer je lijst met plaatsen
 
 // Base URL van je website
 const baseUrl = 'https://www.noahstukadoors.nl';
