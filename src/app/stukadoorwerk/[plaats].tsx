@@ -11,14 +11,15 @@ interface StukadoorPageProps {
 // Genereer dynamische routes voor elke plaats
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = plaatsen.map((plaats) => ({
-    params: { plaats: plaats.toLowerCase() },  // Converteer naar lowercase voor consistente URL's
+    params: { plaats: plaats.toLowerCase() },
   }));
 
   return {
     paths,
-    fallback: false,  // False betekent dat alleen gegenereerde routes worden getoond
+    fallback: 'blocking',  // Dit zorgt ervoor dat routes tijdens runtime worden gegenereerd
   };
 };
+
 
 // Haal de gegevens op voor een specifieke plaats
 export const getStaticProps: GetStaticProps = async ({ params }) => {
