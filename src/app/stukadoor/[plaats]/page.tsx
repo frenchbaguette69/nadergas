@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import { notFound } from 'next/navigation';  // Gebruik voor error handling als route niet bestaat
-import plaatsen from '../data/plaatsen';  // Pas het pad aan naar je data map
+import plaatsen from '../../data/plaatsen';  // Pas het pad aan naar je data map
+import { Header } from '@/sections/Header';
+import { Footer } from '@/sections/Footer';
 
 // Functie voor het genereren van statische params (zoals getStaticPaths)
 export async function generateStaticParams() {
@@ -33,8 +35,10 @@ export default function StukadoorPage({ params }: { params: { plaats: string } }
         <meta name="description" content={seoDescription} />
       </Head>
       <main>
+        <Header />
         <h1>Stukadoor in {capitalizedPlaats}</h1>
         <p>NOAH Stukadoors levert hoogwaardige stukadoorsdiensten in {capitalizedPlaats}, zowel voor renovatie als nieuwbouwprojecten. Wij zijn trots op ons vakmanschap en leveren altijd kwaliteit.</p>
+        <Footer />      
       </main>
     </div>
   );
