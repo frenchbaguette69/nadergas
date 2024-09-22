@@ -9,6 +9,7 @@ import TegelZetter from "@/assets/tegelzetter.webp";
 import StukaDoor from "@/assets/stukadoor.jpg";
 
 
+
 export const ProductShowcase = () => {
   const sectionRef = useRef(null);
   const { scrollYProgress } = useScroll({

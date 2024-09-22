@@ -13,7 +13,6 @@ export default function Home() {
       <Hero />
       <Portfolio />
       <ProductShowcase />
-      
       <Pricing />
       <Testimonials />
       <Footer />

@@ -16,7 +16,7 @@ export const Header = () => {
           Op zoek naar stukadoor, of tegelzetter? 
         </p>
         <div className="inline-flex gap-1 items-center">
-          <p>neem contact op: +31 6 16289147</p>
+          <p>neem contact op: +31 6 45036627</p>
           <ArrowRight className="h-4 w-4 inline-flex justify-center items-center" />
         </div>
       </div>
