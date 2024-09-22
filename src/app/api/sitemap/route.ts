@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import plaatsen from '../../data/plaatsen';  // Zorg dat het pad klopt
 
 export async function GET() {
-  const baseUrl = 'http://localhost:3000';  // Voor lokaal testen
+  const baseUrl = 'https://noah-stukadoor.nl';  // Voor lokaal testen
 
   const staticPages = ['about', 'contact', 'spachtelputz', 'stukadoorwerk', 'tarieven'];
   const dynamicPagesStukadoor = plaatsen.map((plaats) => `/stukadoor/${plaats.toLowerCase()}`);
