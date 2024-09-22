@@ -45,10 +45,10 @@ export default function TegelzetterPage({
   const capitalizedPlaats = plaats.charAt(0).toUpperCase() + plaats.slice(1);
 
   return (
-    <div className="bg-gray-100">
+    <div className="">
       <Header />
       <main className="container mx-auto py-8 px-4 md:px-12">
-        <article className="bg-white p-8 rounded shadow-lg">
+        <article className=" ">
           <h1 className="text-3xl font-bold mb-4 text-gray-800">
             Bent u op zoek naar een tegelzetter {capitalizedPlaats}?
           </h1>

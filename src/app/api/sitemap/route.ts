@@ -1,18 +1,10 @@
-import { NextApiRequest, NextApiResponse } from 'next';
-import plaatsen from '../data/plaatsen';  // Zorg ervoor dat dit pad correct is
+import { NextResponse } from 'next/server';
+import plaatsen from '../../data/plaatsen';  // Zorg dat het pad klopt
 
-const baseUrl = 'https://www.noah-stukadoor.nl';  // Vervang door je eigen domein
+export async function GET() {
+  const baseUrl = 'http://localhost:3000';  // Voor lokaal testen
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const staticPages = [
-    '',
-    'about',
-    'contact',
-    'spachtelputz',
-    'stukadoorwerk',
-    'tarieven',
-  ];
-
+  const staticPages = ['about', 'contact', 'spachtelputz', 'stukadoorwerk', 'tarieven'];
   const dynamicPagesStukadoor = plaatsen.map((plaats) => `/stukadoor/${plaats.toLowerCase()}`);
   const dynamicPagesTegelzetter = plaatsen.map((plaats) => `/tegelzetter/${plaats.toLowerCase()}`);
 
@@ -37,6 +29,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     .join('')}
 </urlset>`;
 
-  res.setHeader('Content-Type', 'application/xml');
-  res.status(200).end(sitemap);
+  return new NextResponse(sitemap, {
+    headers: {
+      'Content-Type': 'application/xml',
+    },
+  });
 }
