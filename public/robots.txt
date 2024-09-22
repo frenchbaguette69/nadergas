@@ -1,4 +1,2 @@
 User-agent: *
-
-Sitemap: https://www.noahstukadoors.nl/api/sitemap/route
-
+Sitemap: https://www.noahstukadoors.nl/api/sitemap

@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import plaatsen from '../../data/plaatsen';  // Zorg ervoor dat het pad correct is
+import plaatsen from '../data/plaatsen';  // Zorg ervoor dat dit pad correct is
 
-const baseUrl = 'https://www.noahstukadoors.nl';
+const baseUrl = 'https://www.noahstukadoors.nl';  // Vervang door je eigen domein
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const staticPages = [
