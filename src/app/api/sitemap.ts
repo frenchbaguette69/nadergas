@@ -1,11 +1,9 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import plaatsen from '../data/plaatsen'; // Importeer je lijst met plaatsen
+import plaatsen from '../data/plaatsen'; // Zorg ervoor dat het pad naar plaatsen klopt
 
-// Base URL van je website
-const baseUrl = 'https://www.noahstukadoors.nl';
+const baseUrl = 'https://www.noahstukadoors.nl';  // Vervang door je eigen domein
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  // Statische pagina's
   const staticPages = [
     '',
     'about',
@@ -15,18 +13,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     'tarieven',
   ];
 
-  // Dynamische pagina's voor stukadoor en tegelzetter
   const dynamicPagesStukadoor = plaatsen.map((plaats) => `/stukadoor/${plaats.toLowerCase()}`);
   const dynamicPagesTegelzetter = plaatsen.map((plaats) => `/tegelzetter/${plaats.toLowerCase()}`);
 
-  // Combineer alle pagina's in één array
   const allPages = [
     ...staticPages.map((page) => `${baseUrl}/${page}`),
     ...dynamicPagesStukadoor.map((page) => `${baseUrl}${page}`),
     ...dynamicPagesTegelzetter.map((page) => `${baseUrl}${page}`),
   ];
 
-  // Bouw de sitemap op
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   ${allPages
@@ -42,7 +37,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     .join('')}
 </urlset>`;
 
-  // Zet de juiste headers voor XML en geef de sitemap terug
   res.setHeader('Content-Type', 'application/xml');
   res.status(200).end(sitemap);
 }
