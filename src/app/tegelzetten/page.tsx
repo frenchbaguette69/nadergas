@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Header } from "@/sections/Header";
-import { Footer } from "@/sections/Footer";
+import  Footer  from "@/sections/Footer";
 import teg1 from "@/assets/tegelzetten1.webp";
 import teg2 from "@/assets/tegelzetten2.jpg";
 import teg3 from "@/assets/tegelzetten3.jpg";

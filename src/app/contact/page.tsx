@@ -1,7 +1,7 @@
 // src/app/contact/page.tsx (Contact-pagina)
 import React from 'react';
 import { Header } from '@/sections/Header';
-import { Footer } from '@/sections/Footer';
+import  Footer  from '@/sections/Footer';
 import { Pricing } from '@/sections/Pricing'; // Importeer de Pricing component als het contactformulier
 
 // Gebruik de nieuwe Metadata API

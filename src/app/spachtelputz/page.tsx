@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Header } from "@/sections/Header";
-import { Footer } from "@/sections/Footer";
+import  Footer  from "@/sections/Footer";
 import Head from "next/head";
 import spa1 from "@/assets/spachtelputz.jpg"
 import Logo from "@/assets/logonoah.png"

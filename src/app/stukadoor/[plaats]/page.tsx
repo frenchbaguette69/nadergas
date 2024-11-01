@@ -1,8 +1,11 @@
 import { notFound } from "next/navigation";
 import plaatsen from "../../data/plaatsen";
 import { Header } from "@/sections/Header";
-import { Footer } from "@/sections/Footer";
+import  Footer  from "@/sections/Footer";
 import { Pricing } from "@/sections/Pricing";
+import { Hero } from "@/sections/Hero";
+import ReviewsSection from "@/sections/ReviewsSection";
+import { ProductShowcase } from "@/sections/ProductShowcase";
 
 // Functie voor het genereren van statische params (zoals getStaticPaths)
 export async function generateStaticParams() {
@@ -47,8 +50,11 @@ export default function StukadoorPage({
   return (
     <div className="">
       <Header />
+      <Hero />
+      <ReviewsSection />
       <main className="container mx-auto py-8 px-4 md:px-12">
         <article className=" p-8 ">
+          
           <h1 className="text-3xl font-bold mb-4 text-gray-800">
             Bent u op zoek naar een stukadoor {capitalizedPlaats}?
           </h1>
@@ -75,7 +81,7 @@ export default function StukadoorPage({
             maatwerkoplossing. Bovendien leveren wij al onze diensten binnen de
             afgesproken tijd en tegen scherpe tarieven.
           </p>
-
+          <ProductShowcase />
           <h3 className="text-xl font-medium mt-6 mb-4 text-gray-700">
             Soorten stukadoor diensten in {capitalizedPlaats}
           </h3>
@@ -85,7 +91,7 @@ export default function StukadoorPage({
             elk type project, van nieuwbouw tot renovatie. Hier is een overzicht
             van onze belangrijkste stukadoorsdiensten:
           </p>
-
+          <Pricing />
           <ul className="list-disc list-inside mb-6 text-gray-600">
             <li>
               <strong>Pleisterwerk</strong>: Een gladde afwerking, ideaal voor
@@ -166,7 +172,6 @@ export default function StukadoorPage({
           </p>
         </article>
       </main>
-      <Pricing />
       <Footer />
     </div>
   );

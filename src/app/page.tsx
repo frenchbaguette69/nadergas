@@ -1,10 +1,12 @@
+"use client"
+
 import { Header } from "@/sections/Header";
 import { Hero } from "@/sections/Hero";
 import { ProductShowcase } from "@/sections/ProductShowcase";
 import { Pricing } from "@/sections/Pricing";
-import { Testimonials } from "@/sections/Testimonials";
-import { Footer } from "@/sections/Footer";
+import Footer  from "@/sections/Footer";
 import Portfolio from "@/sections/portfolio";
+import ReviewsSection from "@/sections/ReviewsSection";
 
 export default function Home() {
   return (
@@ -12,9 +14,9 @@ export default function Home() {
       <Header />
       <Hero />
       <Portfolio />
+      <ReviewsSection />
       <ProductShowcase />
       <Pricing />
-      <Testimonials />
       <Footer />
       
     </>

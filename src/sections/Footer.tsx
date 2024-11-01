@@ -1,22 +1,53 @@
-import Image from "next/image";
-import logo from "@/assets/NOAH.png";
+import React from "react";
+import Link from "next/link";
 
-export const Footer = () => {
+const Footer: React.FC = () => {
   return (
-    <footer className="bg-black text-[#BCBCBC] text-sm py-10 text-center">
-      <div className="container">
-        <div className="inline-flex relative before:content-[''] before:top-2 before:bottom-0 before:w-full before:blur before:bg-[linear-gradient(to_right,#F87BFF,#FB92CF,#FFDD9B,#C2F0B1,#2FD8FE)] before:absolute">
-          <Image src={logo} height={40} alt="SaaS logo" className="relative" />
+    <footer className="bg-black text-white py-8">
+      <div className="px-24 flex flex-col">
+        <div className="text-left md:text-left mb-6 md:mb-10">
+          <div>
+            <h2 className="text-4xl font-extrabold tracking-widest">NOAH STUKADOOR</h2>
+            <p className="mt-2">Bel direct met een van onze vakmannen op:</p>
+            <a href="tel:+31645036627" className="text-green-500 hover:underline">
+            +31 6 45036627
+            </a>
+          </div>
         </div>
-        <nav className="flex flex-col md:flex-row md:justify-center gap-6 mt-6">
-          <a href="#">Over ons</a>
-          <a href="#">Tarieven</a>
-        </nav>
-        <p className="mt-6">
-          &copy; 2024 NOAH stukadoors. All rights reserved.
-          made by <a href="https://pafb.nl">PAFB.nl</a>
-        </p>
+        <div className="bg-white p-4 rounded-lg shadow-lg w-full md:flex justify-between hidden">
+          <div><h3 className="text-2xl font-semibold text-black">
+            Bereken je voordeel
+          </h3>
+          <p className="text-gray-600">
+            Binnen 24 uur gratis en vrijblijvend advies.
+          </p>
+          </div>
+          <div className="flex">
+  <Link
+    href="/contact"
+    className="bg-green-500 text-white px-8 py-4 text-xl font-semibold rounded-md hover:bg-green-600"
+  >
+    Vrijblijvende offerte
+  </Link>
+</div>
+
+        </div>
+      </div>
+      <div className="text-center mt-6 text-gray-500 text-sm">
+        <a href="https://pafb.nl" className="hover:underline">
+        gemaakt door PAFB.NL
+        </a>{""}
+        &nbsp; | &nbsp;{" "}
+        <a href="/stukadoorwerk" className="hover:underline">
+          Stukadoorwerk
+        </a>{" "}
+        &nbsp; | &nbsp;{" "}
+        <a href="#" className="hover:underline">
+          Privacybeleid
+        </a>
       </div>
     </footer>
   );
 };
+
+export default Footer;

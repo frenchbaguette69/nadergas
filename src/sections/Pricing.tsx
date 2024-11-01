@@ -49,7 +49,7 @@ export const Pricing = () => {
   };
 
   return (
-    <section className="md:py-24 bg-gradient-to-b from-[#19ce89]/50 to-[#ffffff] overflow-x-clip py-10 relative">
+    <section className="md:py-24  overflow-x-clip py-10 relative">
       <div className="container mx-auto px-4 relative z-10 max-w-2xl"> {/* Max breedte aangepast */}
         <h2 className="section-title text-3xl font-semibold text-center mb-8">
           Vrijblijvende offerte ontvangen?
@@ -132,7 +132,7 @@ export const Pricing = () => {
 
           <button
             type="submit"
-            className="w-full bg-[#19ce89] text-white font-semibold py-2 px-4 rounded-lg hover:bg-[#17b577] transition duration-300"
+            className="w-full bg-green-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-[#17b577] transition duration-300"
           >
             Offerte Aanvragen
           </button>

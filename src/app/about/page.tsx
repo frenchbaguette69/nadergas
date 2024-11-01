@@ -1,7 +1,7 @@
 // src/app/about/page.tsx (Over ons-pagina)
 import React from 'react';
 import { Header } from '@/sections/Header'; 
-import { Footer } from '@/sections/Footer';
+import  Footer  from '@/sections/Footer';
 import { Metadata } from 'next';
 
 // Gebruik de nieuwe Metadata API
@@ -81,7 +81,7 @@ const About = () => {
           </p>
 
           <p className="text-center mt-8">
-            <a href="/contact" className="text-blue-600 hover:underline">Neem contact met ons op</a> vandaag nog voor meer informatie!
+            <a href="/contact" className="text-green-500 hover:underline">Neem contact met ons op</a> vandaag nog voor meer informatie!
           </p>
         </div>
       </main>

@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Header } from "@/sections/Header";
-import { Footer } from "@/sections/Footer";
+import  Footer  from "@/sections/Footer";
 import stuk1 from "@/assets/stukadoor1.jpg";
 import stuk2 from "@/assets/stukadoor2.jpeg";
 import stuk3 from "@/assets/stukadoor3.jpg";
