@@ -1,6 +1,6 @@
-import { TQuote } from "@/types";
+import type { TQuote } from "@/types";
 
-export function getQuoteEmailTemplate(quote: TQuote): string {
+export function getQuoteEmailTemplate(quote: TQuote, signingLink: string): string {
 	return `
     <div
       style="
@@ -127,7 +127,7 @@ export function getQuoteEmailTemplate(quote: TQuote): string {
           </div>
         </div>
 
-        <div style="margin-bottom: 20px;">
+        <div style="margin-bottom: 30px;">
           <p
             style="
               color: #34495e;
@@ -135,7 +135,56 @@ export function getQuoteEmailTemplate(quote: TQuote): string {
               font-size: 16px;
             "
           >
-            The attached PDF contains full details of the quotation. Please review and contact us if you have any questions.
+            The attached PDF contains full details of the quotation. Please review and sign the document using the button below.
+          </p>
+        </div>
+
+        <!-- CTA Button -->
+        <div
+          style="
+            text-align: center;
+            margin: 30px 0;
+          "
+        >
+          <a
+            href="${signingLink}"
+            style="
+              display: inline-block;
+              background-color: #27ae60;
+              color: white;
+              padding: 14px 28px;
+              text-decoration: none;
+              border-radius: 6px;
+              font-weight: bold;
+              font-size: 16px;
+              transition: background-color 0.3s ease;
+            "
+            onmouseover="this.style.backgroundColor='#219a52'"
+            onmouseout="this.style.backgroundColor='#27ae60'"
+          >
+            Sign Document
+          </a>
+        </div>
+
+        <!-- Additional Information -->
+        <div
+          style="
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 6px;
+            border-left: 4px solid #3498db;
+          "
+        >
+          <p
+            style="
+              color: #34495e;
+              line-height: 1.6;
+              font-size: 14px;
+              margin: 0;
+            "
+          >
+            <strong>Note:</strong> This signing link will expire in 60 days. Please ensure you review and sign the document before the expiration date.
           </p>
         </div>
 
