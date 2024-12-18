@@ -77,15 +77,28 @@ model VerificationToken {
 }
 
 model Quote {
-  id      String  @id @default(cuid())
-  name    String
-  phone   String?
-  email   String
-  service String
-  area    Float
-  total   Float
-  signed  Boolean @default(false)
+  id        String  @id @default(cuid())
+  name      String
+  phone     String?
+  email     String
+  address   String
+  productId String
+  area      Float
+  total     Float
+  signed    Boolean @default(false)
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+
+  service Product @relation(fields: [productId], references: [id])
+}
+
+model Product {
+  id    String @id @default(cuid())
+  title String
+  price Float
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  Quote     Quote[]
 }

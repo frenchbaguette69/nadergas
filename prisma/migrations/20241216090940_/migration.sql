@@ -64,7 +64,8 @@ CREATE TABLE "Quote" (
     "name" TEXT NOT NULL,
     "phone" TEXT,
     "email" TEXT NOT NULL,
-    "service" TEXT NOT NULL,
+    "address" TEXT NOT NULL,
+    "productId" TEXT NOT NULL,
     "area" DOUBLE PRECISION NOT NULL,
     "total" DOUBLE PRECISION NOT NULL,
     "signed" BOOLEAN NOT NULL DEFAULT false,
@@ -72,6 +73,17 @@ CREATE TABLE "Quote" (
     "updatedAt" TIMESTAMP(3) NOT NULL,
 
     CONSTRAINT "Quote_pkey" PRIMARY KEY ("id")
+);
+
+-- CreateTable
+CREATE TABLE "Product" (
+    "id" TEXT NOT NULL,
+    "title" TEXT NOT NULL,
+    "price" DOUBLE PRECISION NOT NULL,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL,
+
+    CONSTRAINT "Product_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateIndex
@@ -100,3 +112,6 @@ ALTER TABLE "Account" ADD CONSTRAINT "Account_userId_fkey" FOREIGN KEY ("userId"
 
 -- AddForeignKey
 ALTER TABLE "Session" ADD CONSTRAINT "Session_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "Quote" ADD CONSTRAINT "Quote_productId_fkey" FOREIGN KEY ("productId") REFERENCES "Product"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
