@@ -77,7 +77,7 @@ model VerificationToken {
 }
 
 model Quote {
-  id        String  @id @default(cuid())
+  id        String  @id @default(dbgenerated("generate_quote_id()")) @db.Text
   name      String
   phone     String?
   email     String

@@ -105,7 +105,7 @@ const Quotes = () => {
 				<TableBody className="relative">
 					{quotes.map((quote) => (
 						<TableRow key={quote.id}>
-							<TableCell className="text-gray-500">#{quote.id}</TableCell>
+							<TableCell className="text-gray-500 text-nowrap">#{quote.id}</TableCell>
 							<TableCell>{moment(quote.createdAt).format("DD MMM YYYY")}</TableCell>
 							{/* @ts-ignore */}
 							<TableCell>{quote.name}</TableCell>

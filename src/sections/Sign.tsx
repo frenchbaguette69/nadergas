@@ -9,6 +9,7 @@ import { Alert, AlertDescription } from "@/components/ui/alert";
 import { InfoIcon, RefreshCcw } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 import axios from "axios";
+import TermsConditions from "@/components/Terms";
 
 interface SignatureSectionProps {
 	token: string;
@@ -114,16 +115,7 @@ export function SignatureSection({ token, onSignatureChange }: SignatureSectionP
 				</CardHeader>
 				<CardContent className="space-y-4">
 					<div className="bg-gray-50 rounded-lg p-4 text-sm text-gray-700 max-h-48 overflow-y-auto">
-						<h3 className="font-medium mb-2">Electronic Signature Agreement</h3>
-						<p className="mb-4">
-							By signing this document electronically, you agree that your electronic signature is the legal equivalent
-							of your manual signature on this document.
-						</p>
-						<h3 className="font-medium mb-2">Consent to Electronic Delivery</h3>
-						<p>
-							You agree and consent to receive electronically all communications, agreements, documents, notices, and
-							disclosures regarding your signature on this document.
-						</p>
+						<TermsConditions />
 					</div>
 
 					<div className="flex items-center space-x-2">
